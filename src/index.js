@@ -23,6 +23,7 @@ app.listen(process.env.PORT,()=>{
         throw err
       }
 })()*/
+import {app} from "./app.js";
 
 dotenv.config({
     path:'./env'
