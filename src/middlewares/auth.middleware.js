@@ -20,7 +20,7 @@ const token =await req.cookies?.accessToken ||  req.header("Authorization")?.rep
   console.log(decodedToken);
   const user=await User.findById(decodedToken?._id).select("-password -refreshToken")
   if(!user){
-      //TODO:discuss about frontend next video
+      
       throw new ApiError(401,"invalid Acess Token")
   }
   
