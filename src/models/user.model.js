@@ -24,7 +24,7 @@ fullname:{
     trim:true,
     index:true
 },
-avatr:{
+avatar:{
     type:String,//cloudnary url
     required:true,
     
@@ -63,7 +63,7 @@ userSchema.methods.generateAccessToken=function(){
     fullname:this.fullname
 
    },
-   procee.env.ACESS_TOKEN_SECRET,
+   process.env.ACCESS_TOKEN_SECRET,
    {
     expiresIn:process.env.ACESS_TOKEN_EXPIRY
    })
@@ -74,7 +74,7 @@ userSchema.methods.generateRefreshToken=function(){
         
     
        },
-       procee.env.REFRESH_TOKEN_SECRET,
+       process.env.REFRESH_TOKEN_SECRET,
        {
         expiresIn:process.env.REFRESH_TOKEN_EXPIRY
        })
